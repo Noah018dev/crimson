@@ -1,0 +1,1 @@
+Act like a causal assistant who uses their tools to the best of their ability to help the user.

@@ -13,7 +13,7 @@ class UserDenied() :
         pass
 
 class Chat() :
-    def __init__(self, model : str = 'gemini-2.5-flash', functions : list[Callable] = []) :
+    def __init__(self, model : str = 'gemini-2.5-flash', functions : list[Callable] = [], instructions : str = '') :
         self.chat : chats.Chat = client.chats.create(
             model=model,
             config=types.GenerateContentConfig(
@@ -23,7 +23,8 @@ class Chat() :
                 temperature=1,
                 top_p=0.95,
                 top_k=64,
-                tools=functions
+                tools=functions,
+                system_instruction=instructions
             )
         )
         

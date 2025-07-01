@@ -1,2 +1,0 @@
-from crimson import intro
-
