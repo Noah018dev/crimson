@@ -53,6 +53,7 @@ class Chat() :
         return StreamingChunk('END', None)
 
 class Tools() :
+    @staticmethod
     def generate_image(prompt : str) -> None :
         '''Generates an image from the prompt, returns None, and nothing else.
         
